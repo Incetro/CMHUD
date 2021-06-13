@@ -52,6 +52,9 @@ final public class CMHUD: UIView {
 
     // MARK: - Properties
 
+    /// Last shown CMHUD
+    private static var current: CMHUD?
+
     /// Current blur view
     private let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 
@@ -118,6 +121,8 @@ final public class CMHUD: UIView {
         withId identifier: String,
         layoutCenter: Bool = false
     ) {
+        current?.superview?.removeFromSuperview()
+        current = hud
         var animated = animated
         if view.isContainsHUD {
             animated = false
