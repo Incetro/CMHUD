@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name            = 'CMHUD'
-  spec.version         = '0.2.0'
+  spec.version         = '0.3.0'
   spec.license         = 'MIT'
   spec.authors         = { 'incetro' => 'incetro@ya.ru' }
   spec.homepage        = "https://github.com/Incetro/CMHUD.git"

@@ -395,11 +395,11 @@ final public class CMHUD: UIView {
 
 extension UIView {
 
-    var isContainsHUD: Bool {
+    public var isContainsHUD: Bool {
         hud != nil
     }
 
-    var hud: CMHUD? {
+    public var hud: CMHUD? {
         subviews.compactMap {
             $0.subviews.compactMap { $0 as? CMHUD }.first
         }.first
