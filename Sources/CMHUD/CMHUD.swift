@@ -119,10 +119,13 @@ final public class CMHUD: UIView {
         in view: UIView,
         animated: Bool,
         withId identifier: String,
-        layoutCenter: Bool = false
+        layoutCenter: Bool = false,
+        removingCurrent: Bool
     ) {
-        current?.superview?.removeFromSuperview()
-        current = hud
+        if removingCurrent {
+            current?.superview?.removeFromSuperview()
+            current = hud
+        }
         var animated = animated
         if view.isContainsHUD {
             animated = false
@@ -166,7 +169,8 @@ final public class CMHUD: UIView {
     public static func loading(
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
-        animated: Bool = true
+        animated: Bool = true,
+        removingCurrent: Bool = false
     ) {
         let activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.startAnimating()
@@ -178,7 +182,8 @@ final public class CMHUD: UIView {
             hud: hud,
             in: view,
             animated: animated,
-            withId: Accessibility.indicationAccessiilityIdentifier
+            withId: Accessibility.indicationAccessiilityIdentifier,
+            removingCurrent: removingCurrent
         )
     }
 
@@ -191,7 +196,8 @@ final public class CMHUD: UIView {
         contentView: UIView,
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
-        animated: Bool = true
+        animated: Bool = true,
+        removingCurrent: Bool = false
     ) {
         let hud = CMHUD(contentView: contentView)
         hud.design(appearance: appearance)
@@ -200,7 +206,8 @@ final public class CMHUD: UIView {
             in: view,
             animated: animated,
             withId: Accessibility.indicationAccessiilityIdentifier,
-            layoutCenter: true
+            layoutCenter: true,
+            removingCurrent: removingCurrent
         )
     }
 
@@ -217,7 +224,8 @@ final public class CMHUD: UIView {
         withAppearance appearance: CMHUDAppearance = .standard,
         identifier: String,
         imageSize: CGSize,
-        animated: Bool = true
+        animated: Bool = true,
+        removingCurrent: Bool = false
     ) {
         let imageWrappingView = UIView()
         let imageWrappingViewSize: CGFloat = 44
@@ -231,7 +239,13 @@ final public class CMHUD: UIView {
         imageView.center(in: imageWrappingView)
         let hud = CMHUD(contentView: imageWrappingView)
         hud.design(appearance: appearance)
-        show(hud: hud, in: view, animated: animated, withId: identifier)
+        show(
+            hud: hud,
+            in: view,
+            animated: animated,
+            withId: identifier,
+            removingCurrent: removingCurrent
+        )
     }
 
     /// Shows success state inside hud
@@ -301,7 +315,8 @@ final public class CMHUD: UIView {
         _ progress: Double,
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
-        animated: Bool = true
+        animated: Bool = true,
+        removingCurrent: Bool = false
     ) {
         if let hud = view.hud, let circleView = hud.contentView as? ProgressView {
             circleView.updateWith(progress: CGFloat(progress))
@@ -319,7 +334,8 @@ final public class CMHUD: UIView {
                 hud: hud,
                 in: view,
                 animated: animated,
-                withId: Accessibility.progressAccessiilityIdentifier
+                withId: Accessibility.progressAccessiilityIdentifier,
+                removingCurrent: removingCurrent
             )
         }
         if progress >= 1 {
@@ -338,7 +354,8 @@ final public class CMHUD: UIView {
         with animationView: T,
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
-        animated: Bool = true
+        animated: Bool = true,
+        removingCurrent: Bool = false
     ) {
         if let hud = view.hud, hud.contentView == animationView {
             animationView.updateProgress(progress)
@@ -349,7 +366,8 @@ final public class CMHUD: UIView {
                 hud: hud,
                 in: view,
                 animated: animated,
-                withId: Accessibility.progressAccessiilityIdentifier
+                withId: Accessibility.progressAccessiilityIdentifier,
+                removingCurrent: removingCurrent
             )
         }
         if progress >= 1 {
