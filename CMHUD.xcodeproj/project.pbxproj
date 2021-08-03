@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,12 @@
 		3380CABF2657E34100549A09 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3380CABE2657E34100549A09 /* UIView.swift */; };
 		3380CAC42657E37700549A09 /* CMHUDAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3380CAC32657E37700549A09 /* CMHUDAppearance.swift */; };
 		3380CAC92657E3A600549A09 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3380CAC82657E3A600549A09 /* UIColor.swift */; };
-		A977525B86A1D56456D65750 /* Pods_CMHUD_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239189E9DEC765D38BFBA07B /* Pods_CMHUD_IOS.framework */; };
 		CB11240E256BF9AE00215E47 /* CMHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30D6C9256ADB0C00EE2C61 /* CMHUD.framework */; };
 		CB112527256C0A8700215E47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1124EF256C09B400215E47 /* MainTests.swift */; };
+		CB2CC73026B94C0500965A17 /* Layout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC72F26B94C0500965A17 /* Layout.xcframework */; };
+		CB2CC73126B94C0500965A17 /* Layout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC72F26B94C0500965A17 /* Layout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB2CC73426B94C0900965A17 /* Toast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC73326B94C0900965A17 /* Toast.xcframework */; };
+		CB2CC73526B94C0900965A17 /* Toast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC73326B94C0900965A17 /* Toast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB30D71D256ADE2E00EE2C61 /* CMHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CB30D71B256ADE2E00EE2C61 /* CMHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,19 +31,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CB2CC73226B94C0500965A17 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB2CC73126B94C0500965A17 /* Layout.xcframework in Embed Frameworks */,
+				CB2CC73526B94C0900965A17 /* Toast.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0DB27082A27514F5868016ED /* Pods-CMHUD IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMHUD IOS.release.xcconfig"; path = "Target Support Files/Pods-CMHUD IOS/Pods-CMHUD IOS.release.xcconfig"; sourceTree = "<group>"; };
-		239189E9DEC765D38BFBA07B /* Pods_CMHUD_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMHUD_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		335E7E842657E1A4008E1552 /* CMHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMHUD.swift; sourceTree = "<group>"; };
 		3371D60A2657FC0100216DB8 /* CMHUD.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CMHUD.xcassets; sourceTree = "<group>"; };
 		3380CABE2657E34100549A09 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3380CAC32657E37700549A09 /* CMHUDAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMHUDAppearance.swift; sourceTree = "<group>"; };
 		3380CAC82657E3A600549A09 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		78E29F7306179BC6AB7492D7 /* Pods-CMHUD IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMHUD IOS.debug.xcconfig"; path = "Target Support Files/Pods-CMHUD IOS/Pods-CMHUD IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CB112409256BF9AE00215E47 /* CMHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB112444256BFA9E00215E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB112490256C024A00215E47 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		CB1124EF256C09B400215E47 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
+		CB2CC72F26B94C0500965A17 /* Layout.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Layout.xcframework; path = Carthage/Build/Layout.xcframework; sourceTree = "<group>"; };
+		CB2CC73326B94C0900965A17 /* Toast.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Toast.xcframework; path = Carthage/Build/Toast.xcframework; sourceTree = "<group>"; };
 		CB30D6C9256ADB0C00EE2C61 /* CMHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CMHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB30D71B256ADE2E00EE2C61 /* CMHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHUD.h; sourceTree = "<group>"; };
 		CB30D71C256ADE2E00EE2C61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,30 +76,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A977525B86A1D56456D65750 /* Pods_CMHUD_IOS.framework in Frameworks */,
+				CB2CC73026B94C0500965A17 /* Layout.xcframework in Frameworks */,
+				CB2CC73426B94C0900965A17 /* Toast.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09AA4B9B55912D780B2D1FF3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				78E29F7306179BC6AB7492D7 /* Pods-CMHUD IOS.debug.xcconfig */,
-				0DB27082A27514F5868016ED /* Pods-CMHUD IOS.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		207AF1DBD3D3AA3826DAB7E4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				239189E9DEC765D38BFBA07B /* Pods_CMHUD_IOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3380CABD2657E33000549A09 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,14 +111,22 @@
 			path = CMHUDTests;
 			sourceTree = "<group>";
 		};
+		CB2CC72E26B94C0500965A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB2CC73326B94C0900965A17 /* Toast.xcframework */,
+				CB2CC72F26B94C0500965A17 /* Layout.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB30D6BD256ADAB400EE2C61 = {
 			isa = PBXGroup;
 			children = (
 				CB30D718256ADE2E00EE2C61 /* Sources */,
 				CB1123F6256BF82700215E47 /* Tests */,
 				CB30D6CA256ADB0C00EE2C61 /* Products */,
-				09AA4B9B55912D780B2D1FF3 /* Pods */,
-				207AF1DBD3D3AA3826DAB7E4 /* Frameworks */,
+				CB2CC72E26B94C0500965A17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,11 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB30D6DB256ADB0D00EE2C61 /* Build configuration list for PBXNativeTarget "CMHUD IOS" */;
 			buildPhases = (
-				B6ED4BED93C96C1FC78831F5 /* [CP] Check Pods Manifest.lock */,
 				CB30D6C4256ADB0C00EE2C61 /* Headers */,
 				CB30D6C5256ADB0C00EE2C61 /* Sources */,
 				CB30D6C6256ADB0C00EE2C61 /* Frameworks */,
 				CB30D6C7256ADB0C00EE2C61 /* Resources */,
+				CB2CC73226B94C0500965A17 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,31 +274,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B6ED4BED93C96C1FC78831F5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CMHUD IOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB112405256BF9AE00215E47 /* Sources */ = {
@@ -536,7 +520,6 @@
 		};
 		CB30D6DC256ADB0D00EE2C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E29F7306179BC6AB7492D7 /* Pods-CMHUD IOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -619,7 +602,6 @@
 		};
 		CB30D6DD256ADB0D00EE2C61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DB27082A27514F5868016ED /* Pods-CMHUD IOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
