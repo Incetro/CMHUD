@@ -10,7 +10,6 @@ Example/Pods/
 Example/Example.xcworkspace/
 Example/Podfile.lock
 *.xcworkspacedata
-*/xcshareddata/
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
