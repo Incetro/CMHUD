@@ -15,9 +15,7 @@
 		CB11240E256BF9AE00215E47 /* CMHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30D6C9256ADB0C00EE2C61 /* CMHUD.framework */; };
 		CB112527256C0A8700215E47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1124EF256C09B400215E47 /* MainTests.swift */; };
 		CB2CC73026B94C0500965A17 /* Layout.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC72F26B94C0500965A17 /* Layout.xcframework */; };
-		CB2CC73126B94C0500965A17 /* Layout.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC72F26B94C0500965A17 /* Layout.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB2CC73426B94C0900965A17 /* Toast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC73326B94C0900965A17 /* Toast.xcframework */; };
-		CB2CC73526B94C0900965A17 /* Toast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB2CC73326B94C0900965A17 /* Toast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB30D71D256ADE2E00EE2C61 /* CMHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CB30D71B256ADE2E00EE2C61 /* CMHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -30,21 +28,6 @@
 			remoteInfo = "CMHUD IOS";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CB2CC73226B94C0500965A17 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CB2CC73126B94C0500965A17 /* Layout.xcframework in Embed Frameworks */,
-				CB2CC73526B94C0900965A17 /* Toast.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		335E7E842657E1A4008E1552 /* CMHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMHUD.swift; sourceTree = "<group>"; };
@@ -208,7 +191,6 @@
 				CB30D6C5256ADB0C00EE2C61 /* Sources */,
 				CB30D6C6256ADB0C00EE2C61 /* Frameworks */,
 				CB30D6C7256ADB0C00EE2C61 /* Resources */,
-				CB2CC73226B94C0500965A17 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
