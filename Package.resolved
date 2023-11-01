@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "layout",
+        "repositoryURL": "https://github.com/Incetro/layout.git",
+        "state": {
+          "branch": "main",
+          "revision": "4f35ce37b8c4a4fe015e2fe0be09888101e73328",
+          "version": null
+        }
+      },
+      {
+        "package": "toast",
+        "repositoryURL": "https://github.com/Incetro/toast.git",
+        "state": {
+          "branch": "main",
+          "revision": "20be7c676fa8338b90637927c1b01f098feb4df7",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

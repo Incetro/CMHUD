@@ -172,7 +172,7 @@ final public class CMHUD: UIView {
         animated: Bool = true,
         removingCurrent: Bool = false
     ) {
-        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        let activityIndicator = UIActivityIndicatorView(style: .medium)
         activityIndicator.startAnimating()
         activityIndicator.color = appearance.centralViewContentColor
         activityIndicator.transform = .init(scaleX: 1.75, y: 1.75)
