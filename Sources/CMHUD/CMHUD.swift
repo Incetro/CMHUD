@@ -181,7 +181,6 @@ final public class CMHUD: UIView {
         activityIndicator.transform = .init(scaleX: 1.75, y: 1.75)
         let hud = CMHUD(contentView: activityIndicator)
         hud.design(appearance: appearance)
-        edit?(hud)
         show(
             hud: hud,
             in: view,
@@ -207,7 +206,6 @@ final public class CMHUD: UIView {
     ) {
         let hud = CMHUD(contentView: contentView)
         hud.design(appearance: appearance)
-        edit?(hud)
         show(
             hud: hud,
             in: view,
@@ -248,7 +246,6 @@ final public class CMHUD: UIView {
         imageView.center(in: imageWrappingView)
         let hud = CMHUD(contentView: imageWrappingView)
         hud.design(appearance: appearance)
-        edit?(hud)
         show(
             hud: hud,
             in: view,
