@@ -169,6 +169,7 @@ final public class CMHUD: UIView {
     public static func loading(
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
+        edit: ((CMHUD) -> Void)? = nil,
         animated: Bool = true,
         removingCurrent: Bool = false
     ) {
@@ -178,6 +179,7 @@ final public class CMHUD: UIView {
         activityIndicator.transform = .init(scaleX: 1.75, y: 1.75)
         let hud = CMHUD(contentView: activityIndicator)
         hud.design(appearance: appearance)
+        edit?(hud)
         show(
             hud: hud,
             in: view,
@@ -195,12 +197,14 @@ final public class CMHUD: UIView {
     public static func loading(
         contentView: UIView,
         in view: UIView,
+        edit: ((CMHUD) -> Void)? = nil,
         withAppearance appearance: CMHUDAppearance = .standard,
         animated: Bool = true,
         removingCurrent: Bool = false
     ) {
         let hud = CMHUD(contentView: contentView)
         hud.design(appearance: appearance)
+        edit?(hud)
         show(
             hud: hud,
             in: view,
@@ -221,6 +225,7 @@ final public class CMHUD: UIView {
     public static func show(
         image: UIImage,
         in view: UIView,
+        edit: ((CMHUD) -> Void)? = nil,
         withAppearance appearance: CMHUDAppearance = .standard,
         identifier: String,
         imageSize: CGSize,
@@ -239,6 +244,7 @@ final public class CMHUD: UIView {
         imageView.center(in: imageWrappingView)
         let hud = CMHUD(contentView: imageWrappingView)
         hud.design(appearance: appearance)
+        edit?(hud)
         show(
             hud: hud,
             in: view,
