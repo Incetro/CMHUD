@@ -118,6 +118,7 @@ final public class CMHUD: UIView {
         hud: CMHUD,
         in view: UIView,
         animated: Bool,
+        customize: ((UIView) -> Void)? = nil,
         withId identifier: String,
         layoutCenter: Bool = false,
         removingCurrent: Bool
@@ -142,6 +143,7 @@ final public class CMHUD: UIView {
         wrappingView.addSubview(hud)
         if layoutCenter {
             wrappingView.prepareForAutolayout().pinToSuperview()
+            customize?(wrappingView)
             hud
                 .prepareForAutolayout()
                 .size(CMHUD.Constants.size)
@@ -169,7 +171,7 @@ final public class CMHUD: UIView {
     public static func loading(
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
-        edit: ((CMHUD) -> Void)? = nil,
+        customize: ((UIView) -> Void)? = nil,
         animated: Bool = true,
         removingCurrent: Bool = false
     ) {
@@ -184,6 +186,7 @@ final public class CMHUD: UIView {
             hud: hud,
             in: view,
             animated: animated,
+            customize: customize,
             withId: Accessibility.indicationAccessiilityIdentifier,
             removingCurrent: removingCurrent
         )
@@ -197,7 +200,7 @@ final public class CMHUD: UIView {
     public static func loading(
         contentView: UIView,
         in view: UIView,
-        edit: ((CMHUD) -> Void)? = nil,
+        customize: ((UIView) -> Void)? = nil,
         withAppearance appearance: CMHUDAppearance = .standard,
         animated: Bool = true,
         removingCurrent: Bool = false
@@ -209,6 +212,7 @@ final public class CMHUD: UIView {
             hud: hud,
             in: view,
             animated: animated,
+            customize: customize,
             withId: Accessibility.indicationAccessiilityIdentifier,
             layoutCenter: true,
             removingCurrent: removingCurrent
@@ -225,7 +229,7 @@ final public class CMHUD: UIView {
     public static func show(
         image: UIImage,
         in view: UIView,
-        edit: ((CMHUD) -> Void)? = nil,
+        customize: ((UIView) -> Void)? = nil,
         withAppearance appearance: CMHUDAppearance = .standard,
         identifier: String,
         imageSize: CGSize,
@@ -249,6 +253,7 @@ final public class CMHUD: UIView {
             hud: hud,
             in: view,
             animated: animated,
+            customize: customize,
             withId: identifier,
             removingCurrent: removingCurrent
         )
@@ -264,6 +269,7 @@ final public class CMHUD: UIView {
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
         animated: Bool = true,
+        customize: ((UIView) -> Void)? = nil,
         hideAfter interval: Double = 1.33
     ) {
         let bundle = Bundle(for: CMHUD.self)
@@ -271,6 +277,7 @@ final public class CMHUD: UIView {
         show(
             image: image,
             in: view,
+            customize: customize,
             withAppearance: appearance,
             identifier: Accessibility.successAccessiilityIdentifier,
             imageSize: CGSize(width: 28, height: 20),
@@ -291,6 +298,7 @@ final public class CMHUD: UIView {
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
         animated: Bool = true,
+        customize: ((UIView) -> Void)? = nil,
         hideAfter interval: Double = 1.33
     ) {
         let bundle = Bundle(for: CMHUD.self)
@@ -301,6 +309,7 @@ final public class CMHUD: UIView {
         ).unsafelyUnwrapped
         show(image: image,
              in: view,
+             customize: customize,
              withAppearance: appearance,
              identifier: Accessibility.errorAccessiilityIdentifier,
              imageSize: CGSize(width: 20, height: 20),
@@ -322,6 +331,7 @@ final public class CMHUD: UIView {
         in view: UIView,
         withAppearance appearance: CMHUDAppearance = .standard,
         animated: Bool = true,
+        customize: ((UIView) -> Void)? = nil,
         removingCurrent: Bool = false
     ) {
         if let hud = view.hud, let circleView = hud.contentView as? ProgressView {
@@ -340,6 +350,7 @@ final public class CMHUD: UIView {
                 hud: hud,
                 in: view,
                 animated: animated,
+                customize: customize,
                 withId: Accessibility.progressAccessiilityIdentifier,
                 removingCurrent: removingCurrent
             )
@@ -359,6 +370,7 @@ final public class CMHUD: UIView {
         _ progress: Double,
         with animationView: T,
         in view: UIView,
+        customize: ((UIView) -> Void)? = nil,
         withAppearance appearance: CMHUDAppearance = .standard,
         animated: Bool = true,
         removingCurrent: Bool = false
@@ -372,6 +384,7 @@ final public class CMHUD: UIView {
                 hud: hud,
                 in: view,
                 animated: animated,
+                customize: customize,
                 withId: Accessibility.progressAccessiilityIdentifier,
                 removingCurrent: removingCurrent
             )
